@@ -100,7 +100,7 @@ print("-------------------------- START RouTe MapPing --------------------------
 print("--------------------------- BASIC UP-FRONT START ------------------------------------")
 @app.route('/')
 def wait():
-    seconds_to_wait = 22 # replace with desired number of seconds to wait
+    seconds_to_wait = 21 # replace with desired number of seconds to wait
     return render_template('wait.html', seconds=seconds_to_wait)
 
 # define login route and function
