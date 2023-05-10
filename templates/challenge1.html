@@ -42,13 +42,36 @@
 	</style>
 </head>
 <body>
+    	<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+		<div class="container">
+			<a class="navbar-brand" href="/i5i5rsuopeyr10cov4ovuev06cb1sxchallenges">Enigma Quest</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Menu
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="{{ url_for('enigma_validator_render') }}">Enigma Validator</a>
+                            <a class="dropdown-item" href="{{url_for('about')}}">About Page</a>
+							<a class="dropdown-item" href="{{url_for('company_link')}}">Company Link</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 	<h1>Encryption Challenge</h1>
+        <h2>For Position 1 - ENIGMA CODE</h2>
 
-    <p>IF ANSWER CORRECT NUMBER WILL BE DISPLAYED HERE : {{ number }}</p>
+    <p>IF ANSWER CORRECT CODE WILL BE DISPLAYED HERE : {{ number }}</p>
 
 	<p>Decrypt the following message:</p>
-	<p>Qebobxo xo cdbokd <strong>(shifted by 3)</strong></p>
-	<form action="/challenge1-validator" method="post">
+	<p>zhoo grqh flskhu <strong>(shifted by 3)</strong></p>
+	<form action="/i5i5rsuopeyr10cov4ovuev06cb1sxchallenge1-validator" method="post">
 		<input type="text" name="answer" placeholder="Enter your answer here">
 		<input type="hidden" name="number" value="{{ number }}">
 		<input type="submit" value="Submit">

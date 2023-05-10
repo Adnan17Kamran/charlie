@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Riddle Challenge</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+			padding: 20px;
+		}
+		h1 {
+			font-size: 36px;
+		}
+		input[type=text] {
+			padding: 10px;
+			border-radius: 5px;
+			border: 1px solid gray;
+			width: 50%;
+			margin-bottom: 20px;
+		}
+		input[type=submit] {
+			padding: 10px 20px;
+			border-radius: 5px;
+			border: none;
+			background-color: #4CAF50;
+			color: white;
+			cursor: pointer;
+		}
+		input[type=submit]:hover {
+			background-color: #45a049;
+		}
+		p {
+			font-size: 18px;
+			margin-bottom: 10px;
+		}
+		.result {
+			font-size: 24px;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+
+          	<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+		<div class="container">
+			<a class="navbar-brand" href="/i5i5rsuopeyr10cov4ovuev06cb1sxchallenges">Enigma Quest</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Menu
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="{{ url_for('enigma_validator_render') }}">Enigma Validator</a>
+                            <a class="dropdown-item" href="{{url_for('about')}}">About Page</a>
+							<a class="dropdown-item" href="{{url_for('company_link')}}">Company Link</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+    {% if result %}
+		<p class="result">{{ result }} The CODE IS : {{ number }}</p>
+	{% endif %}
+	<h1>Unscramble  Ramble!</h1>
+
+            {% if result %}
+		<p class="result">{{ result }} The CODE IS : {{ number }}</p>
+	{% endif %}
+
+            <h2>For Position 6 - ENIGMA CODE</h2>
+	<p>Answer the following two riddles to reveal the word:</p>
+	<form action="/i5i5rsuopeyr10cov4ovuev06cb1sxchallenge6-validator" method="post">
+		<p>Question 1:</p>
+		<p>What is the following word when it is unscrambled?</p>
+        <p>HCPRAATEU</p>
+		<input type="text" name="question1" placeholder="Enter your answer here">
+		<p>Question 2:</p>
+		<p>What is the following scrambled word?</p>
+		<p>NNREAIVARYS</p>
+		<input type="text" name="question2" placeholder="Enter your answer here">
+		<input type="hidden" name="word" value="{{ word }}">
+		<input type="submit" value="Submit">
+	</form>
+    <p> Word will be DISPLAYED BELOW IF YOU ANSWER IT RIGHT !! </p>
+	{% if result %}
+		<p class="result">{{ result }} The NUMBER IS : {{ number }}</p>
+	{% endif %}
+</body>
+</html>

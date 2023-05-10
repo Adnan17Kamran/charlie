@@ -10,8 +10,31 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </head>
   <body>
+      	<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+		<div class="container">
+			<a class="navbar-brand" href="/i5i5rsuopeyr10cov4ovuev06cb1sxchallenges">Enigma Quest</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Menu
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="{{ url_for('enigma_validator_render') }}">Enigma Validator</a>
+                            <a class="dropdown-item" href="{{url_for('about')}}">About Page</a>
+							<a class="dropdown-item" href="{{url_for('company_link')}}">Company Link</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
     <div class="container">
-      <h1>Challenge 10</h1>
+      <h1>Challenge 10 - Quater 4 from the given sheet</h1>
+    <h2>For Position 10 - ENIGMA CODE -- IS CONSTANT ALL ROUNDS , SO GET IT RIGHT ONCE !</h2>>
       <p>Perform the following calculations:</p>
       <ul>
          <li>Find the product of A and B</li>
@@ -19,7 +42,7 @@
         <li>Subtract the result of their difference from the previous result</li>
         <li>Add 5 to the final result</li>
       </ul>
-      <form action="/challenge10-validator" method="POST">
+      <form action="/i5i5rsuopeyr10cov4ovuev06cb1sxchallenge10-validator" method="POST">
         <div class="form-group">
           <label for="number">Enter your answer:</label>
           <input type="number" class="form-control" id="number" name="number" required>
