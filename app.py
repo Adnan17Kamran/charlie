@@ -377,10 +377,10 @@ def challenge7_validator():
     print("-- ENTER VALIDATOR --")
     num = request.form['number']
     print(num)
-    num = int(num)
+    num = float(num)
     number = enigma_code[6]
     print(number)
-    if answer == num:
+    if num in (43,44,45):
         print("ENTER IF")
         return render_template('challenge7.html', number=number, result='Congratulations!')
     else:
@@ -407,10 +407,10 @@ def challenge8_validator():
     print("-- ENTER VALIDATOR --")
     num = request.form['number']
     print(num)
-    num = int(num)
+    num = float(num)
     number = enigma_code[7]
     print(number)
-    if answer == num:
+    if num in (11,12,13):
         print("ENTER IF")
         return render_template('challenge8.html', number=number, result='Congratulations!')
     else:
@@ -437,10 +437,10 @@ def challenge9_validator():
     print("-- ENTER VALIDATOR --")
     num = request.form['number']
     print(num)
-    num = int(num)
+    num = float(num)
     number = enigma_code[8]
     print(number)
-    if answer == num:
+    if num in (8,9,10):
         print("ENTER IF")
         return render_template('challenge9.html', number=number, result='Congratulations!')
     else:
@@ -467,10 +467,11 @@ def challenge10_validator():
     print("-- ENTER VALIDATOR --")
     num = request.form['number']
     print(num)
-    num = int(num)
+    num = float(num)
     number = enigma_code[9]
     print(number)
-    if answer == num:
+
+    if num in (57.2723, 58, 59, 57, 56):
         print("ENTER IF")
         return render_template('challenge10.html', number=number, result='Congratulations!')
     else:
